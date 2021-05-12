@@ -43,12 +43,34 @@ public class League {
         team2.playerArray[4].playerName = "Mendy";
         
         //Creating players and assign them to the playerarray
-        for (Player thePlayer : team1.playerArray){
-            System.out.println(thePlayer.playerName);
-        }
-        for (Player thePlayer : team2.playerArray){
-            System.out.println(thePlayer.playerName);
-        }
+        //for (Player thePlayer : team1.playerArray){
+          //  System.out.println(thePlayer.playerName);
+        //}
+        //for (Player thePlayer : team2.playerArray){
+          //  System.out.println(thePlayer.playerName);
+        //}
+        
+        //Creating a Game and goals
+        Game currGame = new Game();
+        currGame.homeTeam = team1;
+        currGame.awayTeam = team2;
+        
+        Goal goal1 = new Goal();
+        goal1.thePlayer = currGame.homeTeam.playerArray[3];
+        goal1.theTeam = currGame.homeTeam;
+        goal1.theTime = 55;
+        
+        //Putting GOAL OBJECT in Goal array
+        //And the i will assign this goal array to the goals attribute of the GOAL object
+        Goal[] theGoals = {goal1};
+        currGame.goals = theGoals;
+        
+        System.out.println(" Goal scored after " + 
+        currGame.goals[0].theTime + " Mins By " + 
+        currGame.goals[0].thePlayer.playerName + " of " +
+        currGame.goals[0].theTeam.teamName);    
+            
+        
         
 
 
