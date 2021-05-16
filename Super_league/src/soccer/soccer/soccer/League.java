@@ -73,8 +73,11 @@ public class League {
             
         //Searching particular players
           for (Player thePlayer : team2.playerArray ){
-          if (thePlayer.playerName.matches(".*Hak.*"))
+          if (thePlayer.playerName.matches(".*Hak.*")){
+            thePlayer.playerName.split(" ");
             System.out.println("Found " + thePlayer.playerName);
+
+          }
           }
         
 
